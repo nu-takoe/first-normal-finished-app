@@ -1,0 +1,52 @@
+.window {
+    height: 78px;
+    width: 350px;
+    overflow: hidden;
+}
+
+.slider {
+    min-width: 350px;
+    min-height: 7px;
+    display: flex;
+}
+
+.slider * {
+    transition: 1s;
+}
+
+.item {
+    min-height: 100%;
+    min-width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start {
+    animation-name: start-anim;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.arrow {
+    z-index: 10;
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 8px solid #fff;
+    position: relative;
+    top: 70px;
+    left: 172px;
+}
+
+@keyframes start-anim {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-300%);
+    }
+}
